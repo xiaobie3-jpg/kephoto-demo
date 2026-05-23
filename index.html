@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>轲影像云相册</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        html, body {
+            height: 100%;
+        }
+        #app {
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch;
+        }
+        body.video-page-open {
+            overflow: hidden;
+        }
+        body.video-page-open #app {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- 页面容器 -->
+        <div id="page-container"></div>
+
+        <!-- 底部导航 -->
+        <nav class="tab-bar" id="tab-bar">
+            <div class="tab-item active" data-page="home">
+                <span class="tab-icon">🏠</span>
+                <span class="tab-text">首页</span>
+            </div>
+            <div class="tab-item" data-page="profile">
+                <span class="tab-icon">👤</span>
+                <span class="tab-text">我的</span>
+            </div>
+        </nav>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
